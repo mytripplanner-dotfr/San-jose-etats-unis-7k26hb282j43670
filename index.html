@@ -1,0 +1,701 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évasion Californienne: Détente et Découvertes autour de San Jose </title>
+    <link rel="icon" type="image/png" href="https://api.mytripplanner.fr/api/files/pbc_1321337024/47976eld0rscwbc/favicon_ytvg76obie.svg?thumb=100x100&token=" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée en Californie et Douceur à San Jose</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Mystères et Roses de San Jose</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Immersion Tech et Nature Apaisante</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Évasion Côtière à Santa Cruz</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Géants Rouges et Charme de Capitola</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Retour à San Jose et Sérénité Japonaise</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Merveilles Marines de Monterey</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Panoramas de la 17-Mile Drive et Charme de Carmel</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Nature Sauvage à Pinnacles National Park</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Retour à San Jose et Marché Local</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Journée Détente à San Francisco: Parcs et Vues</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Icônes de San Francisco et Vues sur la Baie</a>
+            
+                <a href="#jour-13" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J13 Douceur des Vignes de Sonoma Valley</a>
+            
+                <a href="#jour-14" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J14 Retour à San Jose et Après-midi Bien-être</a>
+            
+                <a href="#jour-15" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J15 Culture et Histoire à San Jose</a>
+            
+                <a href="#jour-16" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J16 Derniers Moments et Préparatifs</a>
+            
+                <a href="#jour-17" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J17 Départ de San Jose</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/San-jose-etats-unis-7k26hb282j43670/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">SAN JOSE- ETATS UNIS</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Évasion Californienne: Détente et Découvertes autour de San Jose</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ Du 4 au 20 Mai 2026</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 Environ 4500-5000 €/personne</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 Environ 18h (avec escales depuis Marseille, France)</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+      <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+      </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée en Californie et Douceur à San Jose</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage, installez-vous confortablement à San Jose. Profitez d'une première soirée relaxante pour vous imprégner de l'ambiance californienne et vous reposer.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée à l'aéroport de San Jose (SJC)</strong>: Récupération de la voiture de location et transfert vers l'hôtel.</li><li>🛏️ <strong>Installation à l'hôtel</strong>: Détendez-vous et défaites vos valises après le vol.</li><li>🚶‍♂️ <strong>Balade relaxante à Kelley Park</strong>: Une promenade douce dans ce grand parc urbain pour se dégourdir les jambes et profiter de la verdure.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-jose-etats-unis-7k26hb282j43670/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Décalage horaire</p>
+                                <p class="text-gray-700">Le décalage horaire avec la France est de 9 heures. Prévoyez une journée légère pour vous adapter.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Mystères et Roses de San Jose</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez l'histoire intrigante d'une maison pas comme les autres, puis laissez-vous charmer par la beauté apaisante d'un jardin de roses primé, avant de dîner dans un quartier animé.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>👻 <strong>Visite de la Winchester Mystery House</strong>: Explorez cette demeure victorienne excentrique, célèbre pour ses escaliers menant au plafond et ses portes ouvrant sur des murs.</li><li>🌹 <strong>Promenade au San Jose Municipal Rose Garden</strong>: Flânez parmi des milliers de rosiers en fleurs, un havre de paix et de couleurs.</li><li>🍽️ <strong>Dîner et ambiance à Santana Row</strong>: Profitez des restaurants et des boutiques de ce quartier chic et animé pour une soirée agréable.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-jose-etats-unis-7k26hb282j43670/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Anecdote</p>
+                                <p class="text-gray-700">Sarah Winchester, la propriétaire de la Winchester Mystery House, était convaincue que les fantômes des victimes des fusils Winchester la hantaient, la poussant à construire sans cesse pour les apaiser.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Immersion Tech et Nature Apaisante</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez dans l'histoire de la technologie qui a façonné la Silicon Valley, puis échappez-vous dans une réserve naturelle pour observer la faune et profiter du calme des zones humides.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>💻 <strong>Visite de l'Intel Museum</strong>: Découvrez l'évolution des microprocesseurs et l'impact d'Intel sur le monde de la technologie, une visite fascinante et accessible.</li><li>🦆 <strong>Balade au Don Edwards San Francisco Bay National Wildlife Refuge</strong>: Profitez d'une promenade paisible le long des sentiers, idéal pour l'observation des oiseaux migrateurs et la sérénité du paysage.</li><li>🧘‍♀️ <strong>Soirée libre et détente</strong>: Reposez-vous à l'hôtel ou explorez un quartier local pour un dîner tranquille.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-jose-etats-unis-7k26hb282j43670/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚗 Conseil Transport</p>
+                                <p class="text-gray-700">Le refuge est vaste, prévoyez de vous déplacer en voiture entre les différents points d'accès et sentiers.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Évasion Côtière à Santa Cruz</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Prenez la route vers la côte pacifique pour une journée de détente à Santa Cruz. Profitez de l'ambiance décontractée de la plage et des vues imprenables sur l'océan.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Route panoramique vers Santa Cruz</strong>: Profitez du trajet d'environ 1h pour admirer les paysages changeants de la Californie.</li><li>🎡 <strong>Promenade sur le Santa Cruz Beach Boardwalk et le Pier</strong>: Flânez le long de la plage, respirez l'air marin et observez les surfeurs et les otaries.</li><li>🌉 <strong>Détente à Natural Bridges State Beach</strong>: Admirez les formations rocheuses naturelles et les arches creusées par l'océan, un lieu idéal pour un coucher de soleil.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-jose-etats-unis-7k26hb282j43670/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🅿️ Parking</p>
+                                <p class="text-gray-700">Le stationnement peut être payant et limité à Santa Cruz, surtout près du Boardwalk. Prévoyez de la monnaie ou une application de paiement.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Géants Rouges et Charme de Capitola</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Marchez au milieu des séquoias géants, une expérience apaisante et majestueuse, puis découvrez le village pittoresque de Capitola, connu pour ses maisons colorées et son ambiance bohème.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🌳 <strong>Randonnée douce à Henry Cowell Redwoods State Park</strong>: Immergez-vous dans la forêt de séquoias, une promenade facile et inspirante parmi ces arbres millénaires.</li><li>🏘️ <strong>Exploration de Capitola Village</strong>: Flânez dans les rues de ce charmant village balnéaire, admirez les boutiques et les maisons colorées sur la plage.</li><li>🌅 <strong>Coucher de soleil sur la plage de Capitola</strong>: Profitez d'un moment de calme en regardant le soleil se coucher sur l'océan Pacifique.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-jose-etats-unis-7k26hb282j43670/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶‍♀️ Sentiers</p>
+                                <p class="text-gray-700">Le "Redwood Grove Loop Trail" à Henry Cowell est une boucle facile et accessible, parfaite pour une promenade relaxante.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour à San Jose et Sérénité Japonaise</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après l'air marin, retournez à San Jose pour une journée plus calme. Détendez-vous dans un jardin japonais traditionnel, un véritable havre de paix au cœur de la ville.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Retour vers San Jose</strong>: Profitez de la matinée pour un dernier café à Santa Cruz ou un court trajet de retour.</li><li>🌸 <strong>Visite du Japanese Friendship Garden</strong>: Laissez-vous transporter par la beauté et la tranquillité de ce jardin inspiré des jardins de Okayama, la ville jumelle de San Jose.</li><li>💆‍♀️ <strong>Après-midi détente ou shopping léger</strong>: Profitez d'un après-midi libre pour vous reposer, lire, ou faire quelques emplettes de souvenirs.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-jose-etats-unis-7k26hb282j43670/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍜 Dîner</p>
+                                <p class="text-gray-700">Le quartier japonais de San Jose (Japantown) est proche du jardin et offre d'excellentes options pour un dîner authentique.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Merveilles Marines de Monterey</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Partez pour Monterey, une ville côtière emblématique. Explorez l'un des aquariums les plus réputés du monde, puis flânez le long de l'historique Cannery Row.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Route vers Monterey</strong>: Un trajet d'environ 1h30 le long de la côte vous mènera à Monterey.</li><li>🐠 <strong>Visite du Monterey Bay Aquarium</strong>: Plongez dans le monde sous-marin de la baie de Monterey, un lieu fascinant et relaxant pour observer la vie marine.</li><li>🚶‍♀️ <strong>Balade sur Cannery Row</strong>: Découvrez cette rue historique, autrefois centre de l'industrie de la sardine, aujourd'hui bordée de boutiques et de restaurants avec vue sur l'océan.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-jose-etats-unis-7k26hb282j43670/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎟️ Billets</p>
+                                <p class="text-gray-700">Réservez vos billets pour l'aquarium à l'avance, surtout si vous voyagez pendant un week-end ou un jour férié.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Panoramas de la 17-Mile Drive et Charme de Carmel</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Empruntez la célèbre 17-Mile Drive pour des vues côtières spectaculaires, puis explorez le village pittoresque de Carmel-by-the-Sea, réputé pour son ambiance artistique et sa plage magnifique.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li> scenic <strong>Parcours de la 17-Mile Drive</strong>: Conduisez sur cette route privée offrant des panoramas époustouflants sur l'océan, les cyprès solitaires et les terrains de golf.</li><li>🏘️ <strong>Exploration de Carmel-by-the-Sea</strong>: Flânez dans les rues de ce village de conte de fées, visitez les galeries d'art et les boutiques.</li><li>🏖️ <strong>Détente sur Carmel Beach</strong>: Profitez de la plage de sable blanc, idéale pour une promenade relaxante au bord de l'eau.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-jose-etats-unis-7k26hb282j43670/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💰 Péage</p>
+                                <p class="text-gray-700">La 17-Mile Drive est une route privée et payante. Le coût est d'environ 11.25 $ par véhicule.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Nature Sauvage à Pinnacles National Park</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aventurez-vous dans l'intérieur des terres pour découvrir Pinnacles National Park, un paysage unique de roches volcaniques et un refuge pour le condor de Californie. Profitez de sentiers doux et de vues imprenables.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Route vers Pinnacles National Park</strong>: Un trajet d'environ 1h depuis Monterey vous mènera à ce parc national moins connu mais spectaculaire.</li><li>🚶‍♀️ <strong>Randonnée douce dans le parc</strong>: Explorez des sentiers comme le "Condor Gulch Trail" ou le "Balconies Cave Trail" (vérifier l'ouverture des grottes) pour admirer les formations rocheuses et la faune.</li><li>🦅 <strong>Observation des condors</strong>: Gardez l'œil ouvert, Pinnacles est l'un des meilleurs endroits pour apercevoir le majestueux condor de Californie en vol.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-jose-etats-unis-7k26hb282j43670/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⚠️ Accès au parc</p>
+                                <p class="text-gray-700">Le parc a deux entrées distinctes (Est et Ouest) qui ne sont pas connectées par la route à l'intérieur du parc. Vérifiez quelle entrée est la plus adaptée à votre itinéraire.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour à San Jose et Marché Local</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après l'aventure à Pinnacles, retournez tranquillement à San Jose. Profitez de l'après-midi pour découvrir un marché local et vous imprégner de l'ambiance californienne.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Retour vers San Jose</strong>: Un trajet relaxant d'environ 1h30 depuis Pinnacles.</li><li>🍎 <strong>Visite d'un marché fermier local</strong>: Découvrez les produits frais de la Californie, les spécialités locales et l'artisanat (vérifier les jours d'ouverture des marchés).</li><li>🍽️ <strong>Dîner dans un restaurant de quartier</strong>: Explorez les options culinaires de San Jose, des cuisines du monde aux saveurs californiennes.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-jose-etats-unis-7k26hb282j43670/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗓️ Jours de marché</p>
+                                <p class="text-gray-700">Les marchés fermiers ont souvent lieu certains jours de la semaine. Renseignez-vous sur les horaires et lieux avant de vous y rendre.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée Détente à San Francisco: Parcs et Vues</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Prenez le train pour une journée relaxante à San Francisco. Explorez les jardins paisibles du Golden Gate Park et savourez les délices du Ferry Building avec vue sur la baie.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚆 <strong>Trajet en Caltrain vers San Francisco</strong>: Laissez la voiture et profitez d'un voyage confortable en train jusqu'au cœur de la ville.</li><li>🌸 <strong>Exploration du Japanese Tea Garden et Conservatory of Flowers</strong>: Flânez dans ces magnifiques jardins du Golden Gate Park, des oasis de calme et de beauté.</li><li>🍽️ <strong>Déjeuner au Ferry Building Marketplace</strong>: Dégustez des produits locaux et des spécialités gourmandes avec une vue imprenable sur la baie et le Bay Bridge.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-jose-etats-unis-7k26hb282j43670/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚇 Transports en commun</p>
+                                <p class="text-gray-700">À San Francisco, utilisez le Muni (bus, tram, métro) pour vous déplacer facilement. Une carte Clipper peut être utile.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Icônes de San Francisco et Vues sur la Baie</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Visitez la célèbre prison d'Alcatraz pour une immersion historique, puis profitez de l'ambiance animée de Fisherman's Wharf et d'une balade en Cable Car, emblème de la ville.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🔒 <strong>Visite d'Alcatraz Island</strong>: Prenez le ferry pour cette île historique et explorez l'ancienne prison fédérale avec un audioguide captivant (réservation indispensable).</li><li>🦀 <strong>Déjeuner à Fisherman's Wharf et observation des otaries</strong>: Savourez un "clam chowder" dans un bol de pain et admirez les otaries paresseuses au Pier 39.</li><li>🚡 <strong>Balade en Cable Car</strong>: Montez à bord d'un Cable Car pour une expérience authentique et des vues imprenables sur les rues vallonnées de San Francisco.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-jose-etats-unis-7k26hb282j43670/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎟️ Alcatraz</p>
+                                <p class="text-gray-700">Les billets pour Alcatraz se vendent des mois à l'avance. Réservez dès que possible pour garantir votre visite.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-13" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 13</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Douceur des Vignes de Sonoma Valley</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Échappez-vous dans la pittoresque Sonoma Valley, moins fréquentée que Napa, pour une journée de dégustation de vins dans un cadre relaxant. Profitez des paysages vallonnés et de l'ambiance décontractée.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Route vers Sonoma Valley</strong>: Un trajet d'environ 1h30 depuis San Jose vous mènera au cœur de la région viticole.</li><li>🍷 <strong>Dégustation de vins dans un domaine familial</strong>: Visitez un ou deux vignobles pour une dégustation commentée et une promenade dans les vignes.</li><li>🏛️ <strong>Exploration de Sonoma Plaza</strong>: Flânez autour de la plus grande place historique de Californie, bordée de boutiques, de restaurants et de bâtiments historiques.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-jose-etats-unis-7k26hb282j43670/main/jour13.jpg" class="w-full h-64 object-cover" alt="Jour 13">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🥂 Dégustation</p>
+                                <p class="text-gray-700">De nombreux domaines proposent des dégustations sans rendez-vous, mais il est préférable de vérifier à l'avance ou de réserver pour les plus petits.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-14" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 14</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour à San Jose et Après-midi Bien-être</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après les délices de la Sonoma Valley, retournez à San Jose pour une journée axée sur la détente. Profitez d'un après-midi libre pour vous ressourcer ou vous offrir un moment de bien-être.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Retour vers San Jose</strong>: Profitez du paysage lors du trajet de retour.</li><li>🧖‍♀️ <strong>Après-midi Spa ou relaxation</strong>: Offrez-vous un massage ou un soin dans un spa local, ou simplement un moment de calme à l'hôtel.</li><li>🍽️ <strong>Dîner tranquille</strong>: Choisissez un restaurant confortable pour un dîner relaxant, peut-être dans un quartier que vous n'avez pas encore exploré.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-jose-etats-unis-7k26hb282j43670/main/jour14.jpg" class="w-full h-64 object-cover" alt="Jour 14">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Conseil</p>
+                                <p class="text-gray-700">De nombreux hôtels proposent des services de spa ou des piscines. Renseignez-vous auprès de votre hébergement.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-15" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 15</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Culture et Histoire à San Jose</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez dans l'histoire ancienne avec la collection égyptienne du Rosicrucian Museum, puis explorez le centre-ville de San Jose pour une dernière immersion culturelle et quelques emplettes.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏺 <strong>Visite du Rosicrucian Egyptian Museum</strong>: Découvrez une impressionnante collection d'artefacts égyptiens, y compris des momies, dans un cadre architectural unique.</li><li>🚶‍♂️ <strong>Exploration du centre-ville de San Jose</strong>: Flânez dans les rues, admirez l'architecture et visitez quelques boutiques pour des souvenirs de dernière minute.</li><li> farewell <strong>Dîner d'adieu</strong>: Profitez d'un dernier dîner mémorable pour célébrer votre voyage en Californie.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-jose-etats-unis-7k26hb282j43670/main/jour15.jpg" class="w-full h-64 object-cover" alt="Jour 15">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Souvenirs</p>
+                                <p class="text-gray-700">Le musée égyptien dispose d'une boutique de souvenirs avec des articles uniques liés à l'Égypte ancienne.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-16" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 16</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers Moments et Préparatifs</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez d'une dernière matinée libre pour faire les derniers achats, revisiter un lieu coup de cœur ou simplement vous détendre avant de préparer votre départ.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>☕ <strong>Matinée libre</strong>: Prenez un café tranquillement, faites du shopping de dernière minute ou revisitez un endroit que vous avez particulièrement apprécié.</li><li>📦 <strong>Préparation des bagages</strong>: Organisez vos souvenirs et préparez vos valises pour le vol retour.</li><li>🍽️ <strong>Dernier déjeuner californien</strong>: Savourez un dernier repas avant de vous diriger vers l'aéroport.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-jose-etats-unis-7k26hb282j43670/main/jour16.jpg" class="w-full h-64 object-cover" alt="Jour 16">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">✈️ Check-in</p>
+                                <p class="text-gray-700">Pensez à faire votre check-in en ligne pour le vol retour afin de gagner du temps à l'aéroport.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-17" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 17</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de San Jose</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le moment de dire au revoir à la Californie. Dirigez-vous vers l'aéroport de San Jose pour votre vol retour vers Marseille, la tête pleine de souvenirs ensoleillés.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Transfert vers l'aéroport de San Jose (SJC)</strong>: Restitution de la voiture de location et enregistrement pour le vol.</li><li>🛫 <strong>Vol retour vers Marseille, France</strong>: Emportez avec vous les souvenirs de cette magnifique aventure californienne.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-jose-etats-unis-7k26hb282j43670/main/jour17.jpg" class="w-full h-64 object-cover" alt="Jour 17">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⛽ Essence</p>
+                                <p class="text-gray-700">N'oubliez pas de faire le plein de votre voiture de location avant de la rendre, si votre contrat l'exige.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>A partir de 810 €/personne (A/R)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>Environ 750 €/personne (location voiture + essence + transports en commun)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>Environ 1200 €/personne (17 jours, budget moyen)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>Environ 1400 €/personne (16 nuits, hôtel 3* en moyenne)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>Environ 350 €/personne (entrées musées, parcs, dégustations)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Mai à Octobre</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Printemps (Avril-Mai)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Automne (Septembre-Octobre)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🛂 Un visa ESTA est obligatoire pour les citoyens français. Faites la demande en ligne au moins 72h avant le départ.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🚗 La conduite se fait à droite. Le permis français est généralement suffisant pour une courte durée, mais un permis international est recommandé.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💸 Le pourboire est une pratique courante et attendue aux États-Unis (restaurants, bars, services). Prévoyez 15-20% du montant de la facture.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🌡️ Les températures en mai à San Jose varient entre 12°C et 25°C. Prévoyez des couches de vêtements pour les variations jour/nuit et près de la côte.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💳 Les cartes de crédit sont largement acceptées. Ayez un peu de liquide pour les petites dépenses ou les marchés.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/San-jose-etats-unis-7k26hb282j43670/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.kayak.fr/flights/MRS-SJC/2026-05-04/2026-05-20" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🛬 Réserve ton vol</strong></a></li>
+                    
+                        <li><a href="https://www.visitcalifornia.com/fr/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Visit California</strong></a></li>
+                    
+                        <li><a href="https://www.sfmta.com/muni" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🚇 Muni San Francisco</strong></a></li>
+                    
+                        <li><a href="https://www.weather.gov/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ National Weather Service</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
